@@ -1,11 +1,9 @@
 default: &default
-  adapter: mysql2
-  encoding: utf8
-  host: 127.0.0.1
-  username: root
-  password: '1234'
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
 
-development: &development
+development:
   <<: *default
   database: hello_rails_development
 
