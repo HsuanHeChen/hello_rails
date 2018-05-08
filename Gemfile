@@ -66,7 +66,6 @@ group :development do
   gem 'capistrano-rails', require: false
   gem 'capistrano-rvm',   require: false
   gem 'capistrano-precompile-on-local'
-  gem 'capistrano-rails-tail-log'
   gem 'capistrano-bundler'
   gem 'capistrano3-puma'
 end
