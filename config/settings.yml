@@ -1,0 +1,13 @@
+defaults: &defaults
+  HOST: "localhost"
+  FACEBOOK_APP_ID: "1829105857103035"
+  FACEBOOK_SECRET: '803e7ce488d3977f9dad484a54911718'
+    
+development:
+  <<: *defaults
+  
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
