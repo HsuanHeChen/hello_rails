@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.10.1'
+lock "3.7.2"
 
 set :application, "hello_rails"
 set :repo_url, "git@github.com:HsuanHeChen/hello_rails.git"
