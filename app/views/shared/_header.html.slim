@@ -1,0 +1,8 @@
+.row
+  .sm-12.md-12.col
+    .text-right
+      - if current_user
+        span = "Hi, #{current_user.email}"
+        = link_to '登出', destroy_user_session_path, :method => :delete, class: "paper-btn btn-small margin btn-warning"
+      - else
+        = link_to 'login', new_session_path(:user), class: "paper-btn btn-small margin btn-secondary"

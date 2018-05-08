@@ -1,0 +1,11 @@
+defaults: &defaults
+  HOST: ''
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

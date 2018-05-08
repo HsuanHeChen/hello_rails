@@ -1,10 +1,24 @@
 doctype html
 html
   head
+    meta charset="utf-8"
     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
     title HelloRails
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
+    = render 'shared/header'
+    
+    .row.flex-spaces
+      .sm-12.md-12.col
+        - if flash[:notice]
+          .alert.alert-success = flash[:notice]
+        - if flash[:alert]
+          .alert.alert-warning = flash[:alert]
+        - if flash[:error]
+          .alert.alert-danger = flash[:error]
+
     = yield
