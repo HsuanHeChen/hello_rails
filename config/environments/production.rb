@@ -57,6 +57,19 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "hello_rails_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.default_url_options = { host: Settings.HOST }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.mailgun.org',
+    port:                 587,
+    domain:               'sandboxde3b2b8ef3c04d1e832455b7fa769f55.mailgun.org',
+    user_name:            'postmaster@sandboxde3b2b8ef3c04d1e832455b7fa769f55.mailgun.org',
+    password:             Settings.MAILGUN_PASSWORD,
+    authentication:       'plain',
+    enable_starttls_auto: true
+  }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
