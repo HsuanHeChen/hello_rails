@@ -75,3 +75,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # tools
 gem 'settingslogic' # 管理常用的 hardcode 變數
+gem 'better_errors'
