@@ -14,7 +14,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         redirect_to new_user_registration_url, alert: "需要您同意 Email 授權唷！"
       else
         session["devise.facebook_data"] = request.env["omniauth.auth"]
-        redirect_to new_user_registration_url
+        redirect_to new_user_registration_url, alert: "#{@user.email}"
       end
     end
   end
