@@ -249,7 +249,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :facebook, Settings.FACEBOOK_APP_ID, Settings.FACEBOOK_SECRET, scope: 'email', 
-    info_fields: 'email,name', callback_url: 'https://hellorails.intelligentcarry.com/'
+    info_fields: 'email,name', callback_url: 'https://hellorails.intelligentcarry.com/users/auth/facebook/callback'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
