@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   root to: 'home_pages#index'
 
+  get 'policy', to: 'home_pages#policy'
+
 end
