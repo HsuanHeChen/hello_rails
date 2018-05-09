@@ -39,7 +39,7 @@ gem 'cancancan'
 # omniauth
 gem 'omniauth'
 # facebook
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '4.0.0'
 gem 'koala'
 # google
 gem 'omniauth-google-oauth2'
