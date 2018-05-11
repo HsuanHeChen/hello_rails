@@ -6,4 +6,7 @@ class HomePagesController < ApplicationController
   def policy
   end
 
+  def terms
+  end
+
 end
