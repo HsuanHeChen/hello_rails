@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Auth", type: :request do
 
-  let!(:user) { User.create!( :email => "foo@example.com", :password => "12345678", :fb_uid => "1234" ) }
+  let!(:user) { User.create!( :email => "foo@example.com", :password => "12345678", :uid => "1234" ) }
 
   describe "facebook" do
     it "should login by facebook access_token (not existing)" do
@@ -21,7 +21,7 @@ RSpec.describe "Auth", type: :request do
       user = User.last
 
       data = {
-        "message" => "Ok",
+        "message" => "success",
         "auth_token" => user.authentication_token,
         "user_id" => user.id
       }
@@ -44,7 +44,7 @@ RSpec.describe "Auth", type: :request do
       expect(response).to have_http_status(200)
 
       data = {
-        "message" => "Ok",
+        "message" => "success",
         "auth_token" => user.authentication_token,
         "user_id" => user.id
       }
@@ -65,18 +65,18 @@ RSpec.describe "Auth", type: :request do
 
   describe "login" do
     it "should login successfully" do
-       post "/api/v1/login", :email => user.email, :password => "12345678"
+      post "/api/v1/login", :email => user.email, :password => "12345678"
 
-       expect(response).to have_http_status(200)
+      expect(response).to have_http_status(200)
 
-       data = {
-         "message" => "Ok",
-         "auth_token" => user.authentication_token,
-         "user_id" => user.id
-       }
+      data = {
+       "message" => "success",
+       "auth_token" => user.authentication_token,
+       "user_id" => user.id
+      }
 
-       expect(JSON.parse(response.body)).to eq(data)
-     end
+      expect(JSON.parse(response.body)).to eq(data)
+    end
 
     it "should login failed if wrong email or password" do
       post "/api/v1/login"
@@ -93,6 +93,7 @@ RSpec.describe "Auth", type: :request do
   end
 
   describe "logout" do
+
     it "should auth error if no auth_token" do
       post "/api/v1/logout"
 
@@ -100,14 +101,14 @@ RSpec.describe "Auth", type: :request do
     end
 
     it "should expire user auth token" do
-      old_auth_token = user.authentication_token
+      auth_token = user.authentication_token
 
-      post "/api/v1/logout", :auth_token => old_auth_token
+      post "/api/v1/logout", :auth_token => auth_token
 
       expect(response).to have_http_status(200)
 
       user.reload
-      expect( user.authentication_token ).not_to eq(old_auth_token)
+      expect(user.authentication_token).not_to eq(auth_token)
     end
 
   end

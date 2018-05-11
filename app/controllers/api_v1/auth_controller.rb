@@ -19,7 +19,7 @@ class ApiV1::AuthController < ApiController
             token: params[:access_token]
           }
         })
-        user = User.api_from_omniauth(auth_hash)
+        user = User.from_omniauth(auth_hash)
       end
 
       success = fb_data && user.persisted?
