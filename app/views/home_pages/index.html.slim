@@ -1,28 +1,80 @@
-.row
-  .sm-12.md-12.col
-    .paper
-      .row.flex-center
-        .text-center
-          h1 Hello Rails
-          h3 iCarry
-  
-  / .sm-12.md-4.col
-  /   .paper
-  /     .row.flex-center
-  /       h2 Collapsibles
-  /     .row
-  /       .collapsible
-  /         input id="collapsible1" type="checkbox" name="collapsible"
-  /         label for="collapsible1" First
-  /         .collapsible-body
-  /           span Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken...
-  /       .collapsible
-  /         input id="collapsible2" type="checkbox" name="collapsible"
-  /         label for="collapsible2" Second
-  /         .collapsible-body
-  /           span Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken...
-  /       .collapsible
-  /         input id="collapsible3" type="checkbox" name="collapsible"
-  /         label for="collapsible3" Third
-  /         .collapsible-body
-  /           span Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken...
+section
+  .row.margin
+    .col.col-12.index-full-screen-section.border
+      .full-screen-content.text-center
+        h1.no-margin
+          span Your 
+          span.main-color I
+          span dea,
+        h5.no-margin
+          span ANDROID
+          span.main-color = " × "
+          span IOS
+          span.main-color = " × "
+          span WEBSITE
+          span.main-color = " × "
+          span UI/UX DESIGN
+        h2.no-margin
+          span I 
+          span.main-color C
+          span.opacity-6 arry.
+
+section#about
+  .row
+    .col.col-12.text-center
+      h2 About us      
+      article.article
+        p We are a young, dynamic and creative team that provides mobile application development, website development, database design, system planning, visual design and user experience optimization. Team members include project plans, UI/UX designer-to-program database planners, and cross-domain expertise to provide a full range of services. We are happy to use technology to solve problems in life and focus on the latest design trends, integrate into user habits, and do our best.
+
+hr
+
+section#services
+  .row
+    .col.col-12.text-center
+      h2 Services
+  .row.flex-edges
+    .col.sm-4.text-center
+      i.fa.fa-4x.fa-mobile.text-muted
+      h3 Android/iOS Apps
+      p Mobile APPs Design and Development. Bluetooth application. Mobile App Background and Server Management System. User Interface Design. Push Service.
+    .col.sm-4.text-center
+      i.fa.fa-4x.fa-connectdevelop.text-muted
+      h3 Web Design
+      p Web Design and Development. Responsive Web Design. API Integration and Development. Content Management System. SQL/NoSQL. E-commerce website development. SEO optimization.
+    .col.sm-4.text-center
+      i.fa.fa-4x.fa-users.text-muted
+      h3 UI/UX Design
+      p Create a pleasing experience for your device or application through visual and touching experience, visually provide a professional and friendly interface design, and promote the friendly interaction between the product and the user. In the technology world, connect people The temperature between people.
+
+hr
+
+section#portfolio
+  / .row
+    .col.col-12.text-center
+      article.article.text-left
+        = image_tag("index/3.jpg", class: "float-left max-width-400")
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non elit sed lorem vulputate consectetur sed vel orci. Nunc orci metus, hendrerit viverra diam a, viverra efficitur nisi. Suspendisse ante sapien, porta vitae augue et, pulvinar posuere nibh. Suspendisse id commodo sem, vestibulum malesuada erat. Duis luctus est sit amet nisl maximus porta. Curabitur tempor nisi tincidunt ultricies rutrum. Nam finibus turpis ut nibh dignissim, in tincidunt mauris suscipit. Curabitur sollicitudin mi quis orci semper, nec egestas nibh mollis. Aenean pellentesque lectus rutrum, ultrices felis malesuada, finibus purus. Morbi eleifend pellentesque justo, quis vestibulum mi. Donec porta ipsum tellus, ac scelerisque lectus pellentesque eget. Etiam quis rutrum dui. Nulla facilisi. Donec imperdiet mattis mi nec fringilla. Donec mollis augue sed viverra placerat. Donec varius, sem sed porttitor euismod, est nunc varius tellus, eget molestie urna arcu ac turpis. Phasellus id sem elit. Vivamus pellentesque mauris vel ex laoreet varius. Vivamus non tempor libero. Nam consectetur nisi erat, ac varius elit porttitor quis. Morbi ullamcorper, tortor in sagittis tempus, justo ipsum pretium urna, ut bibendum nisl orci et eros. Quisque ut ipsum neque. Integer sapien dolor, vestibulum id maximus ac, pharetra eu augue.
+        = image_tag("index/uiux.jpg", class: "float-right max-width-500")
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non elit sed lorem vulputate consectetur sed vel orci. Nunc orci metus, hendrerit viverra diam a, viverra efficitur nisi. Suspendisse ante sapien, porta vitae augue et, pulvinar posuere nibh. Suspendisse id commodo sem, vestibulum malesuada erat. Duis luctus est sit amet nisl maximus porta. Curabitur tempor nisi tincidunt ultricies rutrum. Nam finibus turpis ut nibh dignissim, in tincidunt mauris suscipit. Curabitur sollicitudin mi quis orci semper, nec egestas nibh mollis. Aenean pellentesque lectus rutrum, ultrices felis malesuada, finibus purus. Morbi eleifend pellentesque justo, quis vestibulum mi. Donec porta ipsum tellus, ac scelerisque lectus pellentesque eget. Etiam quis rutrum dui. Nulla facilisi. Donec imperdiet mattis mi nec fringilla. Donec mollis augue sed viverra placerat. Donec varius, sem sed porttitor euismod, est nunc varius tellus, eget molestie urna arcu ac turpis. Phasellus id sem elit. Vivamus pellentesque mauris vel ex laoreet varius. Vivamus non tempor libero. Nam consectetur nisi erat, ac varius elit porttitor quis. Morbi ullamcorper, tortor in sagittis tempus, justo ipsum pretium urna, ut bibendum nisl orci et eros. Quisque ut ipsum neque. Integer sapien dolor, vestibulum id maximus ac, pharetra eu augue.
+        = image_tag("index/2.jpg", class: "float-left max-width-500")
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non elit sed lorem vulputate consectetur sed vel orci. Nunc orci metus, hendrerit viverra diam a, viverra efficitur nisi. Suspendisse ante sapien, porta vitae augue et, pulvinar posuere nibh. Suspendisse id commodo sem, vestibulum malesuada erat. Duis luctus est sit amet nisl maximus porta. Curabitur tempor nisi tincidunt ultricies rutrum. Nam finibus turpis ut nibh dignissim, in tincidunt mauris suscipit. Curabitur sollicitudin mi quis orci semper, nec egestas nibh mollis. Aenean pellentesque lectus rutrum, ultrices felis malesuada, finibus purus. Morbi eleifend pellentesque justo, quis vestibulum mi. Donec porta ipsum tellus, ac scelerisque lectus pellentesque eget. Etiam quis rutrum dui. Nulla facilisi. Donec imperdiet mattis mi nec fringilla. Donec mollis augue sed viverra placerat. Donec varius, sem sed porttitor euismod, est nunc varius tellus, eget molestie urna arcu ac turpis. Phasellus id sem elit. Vivamus pellentesque mauris vel ex laoreet varius. Vivamus non tempor libero. Nam consectetur nisi erat, ac varius elit porttitor quis. Morbi ullamcorper, tortor in sagittis tempus, justo ipsum pretium urna, ut bibendum nisl orci et eros. Quisque ut ipsum neque. Integer sapien dolor, vestibulum id maximus ac, pharetra eu augue.
+  .row.flex-edges
+    .col.sm-4.text-center = image_tag("index/3.jpg")
+    .col.sm-4.text-center = image_tag("index/uiux.jpg")
+    .col.sm-4.text-center = image_tag("index/2.jpg")
+
+
+hr
+
+section#contact
+  .row
+    .col.col-12.text-center
+      h2 Contact us
+      article.article
+        p 希望我們的專業可以為您或您的企業解決需求，更期盼以我們的熱忱為您服務!!
+        p 如果您有問題或意見，請與我們聯繫!!我們將很樂意幫助您找到最佳的解決方案。      
+        i.fa.fa-phone.fa-3x
+        p 02-2711-3681
+        i.fa.fa-envelope-o.fa-3x
+        p 
+          a href="mailto:icarry.inc@gmail.com" icarry.inc@gmail.com

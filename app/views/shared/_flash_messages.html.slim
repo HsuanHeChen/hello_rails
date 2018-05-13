@@ -1,0 +1,9 @@
+- if flash[:notice] || flash[:alert] || flash[:error]
+  .row.flex-spaces
+    .sm-12.md-12.col
+      - if flash[:notice]
+        .alert.alert-success = flash[:notice]
+      - if flash[:alert]
+        .alert.alert-warning = flash[:alert]
+      - if flash[:error]
+        .alert.alert-danger = flash[:error]

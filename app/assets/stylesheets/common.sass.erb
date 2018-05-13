@@ -10,3 +10,52 @@ a[href]:not([class])
 
 .background-white
   background-color: white
+
+// margin
+.no-margin
+  margin: 0 !important
+
+.margin-left-15
+  margin-left: 15px
+
+// color
+.main-color
+  color: #E9762E
+
+// opacity
+.opacity-6
+  opacity: 0.6
+
+.index-full-screen-section
+  position: relative
+  height: 100vh
+  min-height: auto
+  color: #fff
+  background-image: url("<%= asset_path('index/header.jpg') %>")
+  background-position: center
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  background-size: cover
+  -o-background-size: cover
+.full-screen-content
+  position: absolute
+  top: 50%
+  left: 0
+  width: 100%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+
+img.max-width-300, img.max-width-400, img.max-width-500
+  width: 100vw
+img.max-width-300
+  max-width: 300px
+img.max-width-400
+  max-width: 400px
+img.max-width-500
+  max-width: 500px
+
+@media only screen and (max-width: 768px)
+  .hidden-sm
+    display: none !important

@@ -1,8 +1,18 @@
-.row
-  .sm-12.md-12.col
-    .text-right
-      - if current_user
-        span = "Hi, #{current_user.email}"
-        = link_to '登出', destroy_user_session_path, :method => :delete, class: "paper-btn btn-small margin btn-warning"
-      - else
-        = link_to 'login', new_session_path(:user), class: "paper-btn btn-small margin btn-secondary"
+header
+  .row.flex-space.shadow.shadow-small
+    .col-6.col.text-left
+      span.main-color I
+      span ntelligent
+      span.main-color Carry
+    
+    - if action_name == 'index'
+      .col-6.col.text-right.hidden-sm
+        span.margin = link_to "CONTACT", "#contact"
+
+    - else
+      .col-6.col.text-right
+        - if current_user
+          span = "Hi, #{current_user.email}"
+          = link_to '登出', destroy_user_session_path, :method => :delete, class: "paper-btn btn-small btn-warning no-margin"
+        - else
+          = link_to 'login', new_session_path(:user), class: "paper-btn btn-small btn-secondary no-margin"

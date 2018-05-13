@@ -4,11 +4,11 @@ Rails.application.routes.draw do
     omniauth_callbacks: "users/omniauth_callbacks"
   }
 
-
   root to: 'home_pages#index'
 
   get 'policy', to: 'home_pages#policy'
   get 'terms', to: 'home_pages#terms'
+  get 'hello_rails', to: 'home_pages#hello_rails'
 
   scope :path => '/api/v1/', :module => "api_v1", :as => 'v1', :defaults => { :format => :json } do
     post 'login', to: 'auth#login'

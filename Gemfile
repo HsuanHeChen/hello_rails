@@ -12,6 +12,7 @@ gem "mysql2"
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'font-awesome-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -75,3 +76,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # tools
 gem 'settingslogic' # 管理常用的 hardcode 變數
+gem 'meta-tags', require: 'meta_tags' # SEO
