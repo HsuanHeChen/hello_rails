@@ -9,7 +9,8 @@ set :repo_url, "git@github.com:HsuanHeChen/hello_rails.git"
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
-set :deploy_to, "/opt/www/#{fetch(:application)}"
+# set :deploy_to, "/opt/www/#{fetch(:application)}"
+set :deploy_to, "/opt/www/icarry-official-web"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
