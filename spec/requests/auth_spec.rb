@@ -101,7 +101,7 @@ RSpec.describe "Auth", type: :request do
     end
 
     # FAILE:
-    # there is no current_usr after sign_in(user, store: false)
+    # there is error at sign_in(user, store: false)
     xit "should expire user auth token" do
       auth_token = user.authentication_token
       
