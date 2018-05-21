@@ -1,9 +1,10 @@
 header
   .row.flex-space.shadow.shadow-small
     .col-6.col.text-left
-      span.main-color I
-      span ntelligent
-      span.main-color Carry
+      = link_to root_path
+        span.main-color I
+        span ntelligent
+        span.main-color Carry
     
     - if action_name == 'index'
       .col-6.col.text-right.hidden-sm
